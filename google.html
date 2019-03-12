@@ -1,33 +1,61 @@
 ﻿<!DOCTYPE html>
+
 <html lang="pl">
+
 <head>
 	<meta charset="utf-8">
 	<title>Google</title>
-	<link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" href="ikona.JPG">
+  
+	<link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="css/all.min.css">
+  <link rel="shortcut icon" href="ikona.JPG">  
+  
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js">
+        mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button'));
+    </script>
+  <script>
+        document.getElementsByClassName("zawartosc-input-text")[0].addEventListener("focus", () => document.getElementsByClassName("zawartosc-input")[0].classList.add("zad1-Search--isActive"));
+        document.getElementsByClassName("zawartosc-input-text")[0].addEventListener("blur", () => document.getElementsByClassName("zawartosc-input")[0].classList.remove("zad1-Search--isActive")); 
+    </script>
 </head>
-<body>
- <div id="ramka">
-	 <header id="header">
-       <nav>
-        <a href="https://www.google.pl/" class="menu text" >Gmail</a><a href="https://www.google.pl/" class="menu text">Grafika</a><a href="https://www.google.pl/" class="menu"><img src="kwadraciki.JPG" alt="więcej" /></a><a href="https://www.google.pl/" class="menu"><img src="avatar.JPG" alt="avatar" /></a>
-        </nav>
-        </header>
-	
-		<div id="zawartosc">
-        <img src="logo.JPG" alt="logo" id="google">
 
-			<div id="div_input">
-			<input id="input" type="text">
-			<div class="input_icon"><a href="https://www.google.pl/"><img src="klawiatura.JPG" alt="google"/></a>
+<body>
+	 <header class="header">
+    <a class="header-icons" id="grey" href="https://www.google.pl/" class="menu text" >Gmail</a>
+    <a class="header-icons" id="grey" href="https://www.google.pl/imghp?hl=pl&tab=wi" class="menu text">Grafika</a>
+    <a class="header-icons" href="https://about.google/intl/pl/products" class="menu"><i id="lightgrey" class="fas fa-th"></i></a>
+    <a class="header-icons" href="https://www.google.pl/" class="menu"><img src="avatar.JPG" alt="avatar" /></a>
+   </header>
+    
+   <main class="zawartosc">
+      <img class="zawartosc-logo" src="logo.JPG" alt="logo">
+			<div class="zawartosc-input">
+        <i id="icon-margins" id="blue" class="fas fa-search"></i>
+        <input class="zawartosc-input-text" type="text">
+        <i id="icon-margins" id="lightgrey" class="fas fa-keyboard"></i>
+        <i id="icon-margins" id="blue" class="fas fa-microphone"></i>
 			</div>
-			</div>
-			<div id="container_button"><input class="button" value="Szukaj w Google" type="submit"><input  class="button" value="Szczęśliwy traf"  type="submit"></div>
-		</div>
-	</div>
-  <footer>
-    <div id="ending"><span id="Polska">Polska</span></div>
-    <div id="options"><span id="left"> <a href="https://www.google.pl/" class="menu text" type="b">Reklamuj się</a><a href="https://www.google.pl/" class="menu text" type="b">Dla firm</a><a href="https://www.google.pl/" class="menu text "type="b">O nas</a></span><span id="right"><a href="https://www.google.pl/" class="menu text" type="b">Ustawienia</a><a href="https://www.google.pl/" class="menu text" type="b">Warunki</a><a href="https://www.google.pl/" class="menu text" type="b">Prywatność</a></span></div>
+      
+			<div id="przycisk">
+        <button class="przycisk-button mdc-button mdc-button--unelevated">Szukaj w Google</button>
+        <button class="przycisk-button mdc-button mdc-button--unelevated">Szczęśliwy traf</button>
+      </div>
+  </main>
+  
+  <footer class="footer">
+    <div class="footer-more">
+      <p class="footer-more-country">Polska</p>
+    </div>
+    
+    <div class="footer-more">
+      <a class="footer-more-left" href="https://ads.google.com">Reklamuj się</a>
+      <a class="footer-more-left" href="https://www.google.com/services">Dla firm</a>
+      <a class="footer-more-left" href="https://about.google/intl">O nas</a>
+      <a class="footer-more-right" href="https://www.google.com/preferences">Ustawienia</a>
+      <a class="footer-more-right" href="https://policies.google.com/terms">Warunki</a>
+            <a class="footer-more-right" href="https://policies.google.com/privacy">Prywatność</a>
+    </div>
   </footer>
+  
 </body>
 </html>
