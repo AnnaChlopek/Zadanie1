@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+
+<head>
+	<meta charset="utf-8">
+	<title>Google</title>
+  <link rel="shortcut icon" href="ikona.JPG">  
+  
+	<link rel="stylesheet" type="text/css" href="ref_style.css">
+  <link rel="stylesheet" type="text/css" href="css/all.min.css">
+  
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js">
+        mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button'));
+    </script>
+  <script>
+        document.getElementsByClassName("zawartosc-input-text")[0].addEventListener("focus", () => document.getElementsByClassName("zawartosc-input")[0].classList.add("zad1-Search--isActive"));
+        document.getElementsByClassName("zawartosc-input-text")[0].addEventListener("blur", () => document.getElementsByClassName("zawartosc-input")[0].classList.remove("zad1-Search--isActive")); 
+    </script>
+</head>
+
+<body>    
+
+	 <div id="zawartosc" class="header" topmargin="3" marginheight="3">
+    <a href="https://www.google.pl/" class="menu left" ><img class="zawartosc-logo" src="logo.JPG" alt="logo"/> </a>
+    <div class="zawartosc-input" >
+    <form>
+      <input class="zawartosc-input-text" type="text" v-model="inputContent"/>
+        <i id="icon-margins" id="lightgrey" class="fas fa-keyboard"></i>
+        <i id="icon-margins" id="blue" class="fas fa-microphone"></i>
+        <i id="icon-margins" id="blue" class="fas fa-search"></i>
+        <v-autocompleter v-bind:input="inputContent" v-if="inputContent"></v-autocompleter>
+    </form>
+    </div>
+      
+    <a class="header-icons" href="https://www.google.pl/" class="menu"><img src="avatar.JPG" alt="avatar" /></a>
+    <a class="header-icons" href="https://about.google/intl/pl/products" class="menu"><i id="lightgrey" class="fas fa-th"></i></a>
+   </div>
+
+
+  <div id="top_nav">
+     <a href="#">Wszystko</a> 
+     <a href="#">Wiadomosci</a> 
+     <a href="#">Grafika</a> 
+     <a href="#">Zakupy</a> 
+     <a href="#">Filmy</a> 
+     <a href="#">Wiecej</a> 
+     <a href="#">Ustawienia</a> 
+     <a href="#">Narzedzia</a> 
+  </div>
+
+  <div id="search">
+    <p> Okolo 242 000 000 wynikow (0,35s)</p>
+  </div>
+
+  <div id="wyniki">
+    <div class="links">
+      <div id="tytul"><a href="#" >Wyszukanie1</a></div>
+      <div id="adres"><a href="#">link_wyszukanie1</a></div>
+      <div id="tekst"><p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p></div>
+      
+      <div id="tytul"><a href="#" >Wyszukanie2</a> </div>
+      <div id="adres"><a href="#">link_wyszukanie2</a></div>
+      <div id="tekst"><p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p></div>
+      
+      <div id="tytul"><a href="#" >Wyszukanie3</a> </div>
+      <div id="adres"><a href="#">link_wyszukanie3</a></div>
+      <div id="tekst"><p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p></div>
+      
+      <div id="tytul"><a href="#" >Wyszukanie4</a> </div>
+      <div id="adres"><a href="#">link_wyszukanie4</a></div>
+      <div id="tekst"><p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p></div>
+      
+      <div id="tytul"><a href="#" >Wyszukanie5</a> </div>
+      <div id="adres"><a href="#">link_wyszukanie5</a></div>
+      <div id="tekst"><p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p></div>
+      
+    </div>   
+  </div>
+  
+  <div class="search_logo">
+    <div class="letters">
+      <img class="f_letter" src="g.JPG" alt="g letter"/>
+      <img class="letter" src="o_c.JPG" alt="o letter"/>
+      <img class="letter" src="o_z.JPG" alt="o letter"/>
+      <img class="letter" src="o_z.JPG" alt="o letter"/>
+      <img class="letter" src="o_z.JPG" alt="o letter"/>
+      <img class="letter" src="o_z.JPG" alt="o letter"/>
+      <img class="letter" src="o_z.JPG" alt="o letter"/>
+      <img class="letter" src="o_z.JPG" alt="o letter"/>
+      <img class="letter" src="o_z.JPG" alt="o letter"/>
+      <img class="letter" src="o_z.JPG" alt="o letter"/>
+      <img class="letter" src="o_z.JPG" alt="o letter"/>
+      <img class="letter" src="gle.JPG" alt="o letter"/>
+    </div>
+    <div class="numbers">
+      <a class="f_numb" href="#">1</a>
+      <a class="numb" href="#">2</a>
+      <a class="numb" href="#">3</a>
+      <a class="numb" href="#">4</a>
+      <a class="numb" href="#">5</a>
+      <a class="numb" href="#">6</a>
+      <a class="numb" href="#">7</a>
+      <a class="numb" href="#">8</a>
+      <a class="numb" href="#">9</a>
+      <a class="numb" href="#">10</a>
+      <a class="next" href="#">Nastepna</a>
+    </div>
+    <br/>
+  </div>
+
+    <footer class="footer">
+    <div class="footer-more">
+      <p class="footer-more-country">Polska</p>
+      <div class="footer-more-loc"> 
+        <span class="footer-more-loc-col"></span>
+        <span class="footer-more-loc-adres">Akademia Gorniczo-Hutnicza im. Stanislawa Staszica w Krakowie, Krakow</span>
+        <span class="footer-more-loc-sp">-</span>
+        <span class="footer-more-loc-poch">Z Twojego telefonu (Historia lokalizacji)</span>
+        <span class="footer-more-loc-sp">-</span>
+        <a href="#" >Uzyj dokladnej lokalizacji</a>
+        <span class="footer-more-loc-sp">-</span>
+        <a href="https://support.google.com/websearch/answer/179386?p=ws_settings_location&hl=pl&visit_id=636897311146904018-2086675484&rd=1" >Dowiedz sie wiecej</a>
+      </div>
+    </div>
+    
+    <div class="footer-more">
+      <a class="footer-more-left" id="first" href="https://support.google.com/websearch/?visit_id=636897311146904018-2086675484&hl=pl&rd=2#topic=3378866">Pomoc</a>
+      <a class="footer-more-left" href="#">Przeslij opinie</a>
+      <a class="footer-more-left" href="https://policies.google.com/privacy">Prywatnosc</a>
+      <a class="footer-more-left" href="https://policies.google.com/terms">Warunki</a>   
+    </div>
+  </footer>
+  
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+    <script defer src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="animals.js"></script>
+    <script src="autocompleter.js"></script>
+
+</body>
+</html>
+ 

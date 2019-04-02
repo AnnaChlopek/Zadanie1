@@ -31,14 +31,14 @@
     
    <main class="zawartosc">
       <img class="zawartosc-logo" src="logo.JPG" alt="logo">
-			<div class="zawartosc-input" id="app">
+			<form class="zawartosc-input" id="app">
         <i id="icon-margins" id="blue" class="fas fa-search"></i>
         <input class="zawartosc-input-text" type="text" v-model="inputContent"/>
         <i id="icon-margins" id="lightgrey" class="fas fa-keyboard"></i>
         <i id="icon-margins" id="blue" class="fas fa-microphone"></i>
-        <v-autocompleter v-bind:input="inputContent" v-if="inputContent"></v-autocompleter>
-			</div>
-      
+
+			</form>
+              <v-autocompleter v-bind:input="inputContent" v-if="inputContent"></v-autocompleter>
       <br/>
 			<div id="przycisk">
         <button class="przycisk-button mdc-button mdc-button--unelevated" v-if="!inputContent">Szukaj w Google</button>
