@@ -4,7 +4,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Google</title>
+	<title>Szukaj w Google</title>
   <link rel="shortcut icon" href="ikona.JPG">  
   
 	<link rel="stylesheet" type="text/css" href="ref_style.css">
@@ -13,16 +13,15 @@
   <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js">
         mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button'));
     </script>
-  <script>
-        document.getElementsByClassName("zawartosc-input-text")[0].addEventListener("focus", () => document.getElementsByClassName("zawartosc-input")[0].classList.add("zad1-Search--isActive"));
-        document.getElementsByClassName("zawartosc-input-text")[0].addEventListener("blur", () => document.getElementsByClassName("zawartosc-input")[0].classList.remove("zad1-Search--isActive")); 
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vue-router@2.7.0/dist/vue-router.js"></script>
 </head>
 
 <body>    
 
 	 <div id="zawartosc" class="header" topmargin="3" marginheight="3">
-    <a href="https://www.google.pl/" class="menu left" ><img class="zawartosc-logo" src="logo.JPG" alt="logo"/> </a>
+    <a href="google.html" class="menu left" ><img class="zawartosc-logo" src="logo.JPG" alt="logo"/> </a>
     <div class="zawartosc-input" >
     <form>
       <input class="zawartosc-input-text" type="text" v-model="inputContent"/>
@@ -37,16 +36,16 @@
     <a class="header-icons" href="https://about.google/intl/pl/products" class="menu"><i id="lightgrey" class="fas fa-th"></i></a>
    </div>
 
-
   <div id="top_nav">
-     <a href="#">Wszystko</a> 
-     <a href="#">Wiadomosci</a> 
-     <a href="#">Grafika</a> 
-     <a href="#">Zakupy</a> 
-     <a href="#">Filmy</a> 
-     <a href="#">Wiecej</a> 
-     <a href="#">Ustawienia</a> 
-     <a href="#">Narzedzia</a> 
+     <a href="#"><router-link to="/">Wszystko</router-link></a> 
+     <a href="#"><router-link to="/wiadomosci">Wiadomosci</router-link></a> 
+     <a href="#"><router-link to="/grafika">Grafika</router-link></a> 
+     <a href="#"><router-link to="/zakupy">Zakupy</router-link></a> 
+     <a href="#"><router-link to="/filmy">Filmy</router-link></a> 
+     <a href="#"><router-link to="/wiecej">Wiecej</router-link></a> 
+     <a href="#"><router-link to="/ustawienia">Ustawienia</router-link></a> 
+     <a href="#"><router-link to="/narzedzia">Narzedzia</router-link></a>
+     <router-view></router-view>
   </div>
 
   <div id="search">
@@ -114,7 +113,7 @@
       <p class="footer-more-country">Polska</p>
       <div class="footer-more-loc"> 
         <span class="footer-more-loc-col"></span>
-        <span class="footer-more-loc-adres">Akademia Gorniczo-Hutnicza im. Stanislawa Staszica w Krakowie, Krakow</span>
+        <span class="footer-more-loc-adres">Krakow</span>
         <span class="footer-more-loc-sp">-</span>
         <span class="footer-more-loc-poch">Z Twojego telefonu (Historia lokalizacji)</span>
         <span class="footer-more-loc-sp">-</span>
@@ -131,7 +130,36 @@
       <a class="footer-more-left" href="https://policies.google.com/terms">Warunki</a>   
     </div>
   </footer>
-  
+    <script>
+      var Wszystko = { template: '' };
+      var Wiadomosci = { template: '<p>Witaj w zakladce "Wiadomosci".</p>' };
+      var Grafika = { template: '<p>Witaj w zakladce "Grafika".</p>' };
+      var Zakupy = { template: '<p>Witaj w zakladce "Zakupy".</p>' };
+      var Filmy = { template: '<p>Witaj w zakladce "Filmy".</p>' };
+      var Wiecej = { template: '<p>Witaj w zakladce "Wiecej".</p>' };
+      var Ustawienia = { template: '<p>Witaj w zakladce "Ustawienia".</p>' };
+      var Narzedzia = { template: '<p>Witaj w zakladce "Narzedzia".</p>' };
+
+      var routes = [
+        { path: '/', component: Wszystko },
+        { path: '/wiadomosci', component: Wiadomosci},
+        { path: '/grafika', component: Grafika},
+        { path: '/zakupy', component: Zakupy},
+        { path: '/filmy', component: Filmy},
+        { path: '/wiecej', component: Wiecej},
+        { path: '/ustawienia', component: Ustawienia},
+        { path: '/narzedzia', component: Narzedzia},
+      ];
+
+      var router = new VueRouter({
+        routes: routes,
+      });
+      var app = new Vue({
+        el: '#top_nav',
+        router: router
+      });
+    </script>
+    
     <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
     <script defer src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

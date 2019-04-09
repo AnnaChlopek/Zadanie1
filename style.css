@@ -4,7 +4,8 @@ body{
    font-family:arial,sans-serif;
    height:100%;
    margin:0;
-   
+   overflow-x: hidden;
+   overflow-y: auto;
 }
 
 
@@ -108,10 +109,14 @@ header img{
 .przycisk-button.mdc-button.mdc-button--unelevated{
    margin: 8px;
    background-color: rgb(244,244,244);
-   color: rgb(108,110,110);
    text-transform: initial;
    font-family: arial, sans-serif;
    letter-spacing: normal;
+}
+
+.przycisk-button.mdc-button.mdc-button--unelevated a{
+      text-decoration: none;
+      color: rgb(108,110,110);
 }
 
 .przycisk-button.mdc-button.mdc-button--unelevated:hover{

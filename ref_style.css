@@ -124,21 +124,31 @@ float:left;
 
 
 #top_nav a{
-   color: #666;
+   color: #777;
    text-decoration: none;
-   margin: 0 16px 0 16px;
+   margin: 0 7px;
 }
 
 #top_nav a:hover{
   color: #333333;
 }
 
-#top_nav a:active{
+#top_nav a:focus{
    padding-bottom: 14px;
    border-bottom: 3px solid #1A73E8;
    color: #1A73E8;
    font-weight: bold;
 }
+
+#top_nav p{
+   color: #8C001A;
+   font-size: 20px;
+   text-decoration: none;
+   float: right;
+   position:relative;
+   background: white;
+}
+
 
 #search{
    font-size: 13px;
@@ -248,7 +258,7 @@ table {
     text-decoration: none;
     border-top: 1px rgb(228, 228, 228) solid;
     margin: 0;    
-    padding-left: 27px;
+    padding-left: 10px;
 }
 
 .footer-more-country {
